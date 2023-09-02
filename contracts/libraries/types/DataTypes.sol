@@ -12,6 +12,7 @@ library DataTypes {
     enum OrdinalState
     {
         STAKED,
+        REPAID,
         DEFAULTED
     }
     struct Ordinal
@@ -27,10 +28,9 @@ library DataTypes {
     struct LoanData
     {
         uint loanId;
-        uint borrower;
+        address borrower;
         uint borrowedAmount;
         LoanState state;
-        Ordinal [] ordinals;
     }
-    
+
 }
