@@ -34,7 +34,7 @@ using CountersUpgradeable for CountersUpgradeable.Counter;
     return idOfLoan;
     
  }
- function repayLoan(uint _loanId , address _owner) external returns(uint)
+ function repayLoan(uint _loanId , address _owner) external
  {
    DataTypes.LoanData storage currentLoan = loans[_loanId];
    if(keccak256(abi.encodePacked(DataTypes.LoanState.ACTIVE)) == keccak256(abi.encodePacked(currentLoan.state)))
@@ -50,6 +50,5 @@ using CountersUpgradeable for CountersUpgradeable.Counter;
      currentCollateral[i].owner = _owner;
 
    }
-    return _loanId;
  }
 }
