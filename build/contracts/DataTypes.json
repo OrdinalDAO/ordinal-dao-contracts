@@ -1,0 +1,462 @@
+{
+  "contractName": "DataTypes",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/libraries/types/DataTypes.sol\":\"DataTypes\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/libraries/types/DataTypes.sol\":{\"keccak256\":\"0xd2f86d4f4acabae5ab6ad69e6e2cdfa5fd9fb059a96b24db512b5d7e0c04b421\",\"license\":\"OrdinalDAO\",\"urls\":[\"bzz-raw://35c0ced57d74b1684cb71d3ac87c623631216547b3043a826135eae16d1252e5\",\"dweb:/ipfs/QmNjNXFSFUanb95sFGXmexcivL6MWUmNYNFj5zXKAn4MjB\"]}},\"version\":1}",
+  "bytecode": "0x60566050600b82828239805160001a6073146043577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220bacca03020ea8c319f4d3e5af5196b38c23be3c270abc06e5f352b999d7586f264736f6c63430008110033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220bacca03020ea8c319f4d3e5af5196b38c23be3c270abc06e5f352b999d7586f264736f6c63430008110033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "68:634:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "68:634:1:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: OrdinalDAO\r\npragma solidity ^0.8.10;\r\n\r\nlibrary DataTypes {\r\n    enum LoanState\r\n    {\r\n        CREATED,\r\n        ACTIVE,\r\n        REPAID,\r\n        DEFAULTED\r\n    }\r\n    enum OrdinalState\r\n    {\r\n        STAKED,\r\n        REPAID,\r\n        DEFAULTED\r\n    }\r\n    struct Ordinal\r\n    {\r\n        uint id; // escrow id from deeplake\r\n        string collection_name;\r\n        uint priceWhenBorrowed;\r\n        address staker;\r\n        address owner; // changes to smart contract address when staked\r\n        OrdinalState state; \r\n\r\n    }\r\n    struct LoanData\r\n    {\r\n        uint loanId;\r\n        address borrower;\r\n        uint borrowedAmount;\r\n        LoanState state;\r\n    }\r\n\r\n}",
+  "sourcePath": "C:\\Users\\soumy\\Desktop\\rootstock-testing\\Ordinal Dao\\smart contracts\\contracts\\libraries\\types\\DataTypes.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/libraries/types/DataTypes.sol",
+    "exportedSymbols": {
+      "DataTypes": [
+        109
+      ]
+    },
+    "id": 110,
+    "license": "OrdinalDAO",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 75,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:24:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "DataTypes",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "id": 109,
+        "linearizedBaseContracts": [
+          109
+        ],
+        "name": "DataTypes",
+        "nameLocation": "76:9:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "DataTypes.LoanState",
+            "id": 80,
+            "members": [
+              {
+                "id": 76,
+                "name": "CREATED",
+                "nameLocation": "124:7:1",
+                "nodeType": "EnumValue",
+                "src": "124:7:1"
+              },
+              {
+                "id": 77,
+                "name": "ACTIVE",
+                "nameLocation": "142:6:1",
+                "nodeType": "EnumValue",
+                "src": "142:6:1"
+              },
+              {
+                "id": 78,
+                "name": "REPAID",
+                "nameLocation": "159:6:1",
+                "nodeType": "EnumValue",
+                "src": "159:6:1"
+              },
+              {
+                "id": 79,
+                "name": "DEFAULTED",
+                "nameLocation": "176:9:1",
+                "nodeType": "EnumValue",
+                "src": "176:9:1"
+              }
+            ],
+            "name": "LoanState",
+            "nameLocation": "98:9:1",
+            "nodeType": "EnumDefinition",
+            "src": "93:99:1"
+          },
+          {
+            "canonicalName": "DataTypes.OrdinalState",
+            "id": 84,
+            "members": [
+              {
+                "id": 81,
+                "name": "STAKED",
+                "nameLocation": "232:6:1",
+                "nodeType": "EnumValue",
+                "src": "232:6:1"
+              },
+              {
+                "id": 82,
+                "name": "REPAID",
+                "nameLocation": "249:6:1",
+                "nodeType": "EnumValue",
+                "src": "249:6:1"
+              },
+              {
+                "id": 83,
+                "name": "DEFAULTED",
+                "nameLocation": "266:9:1",
+                "nodeType": "EnumValue",
+                "src": "266:9:1"
+              }
+            ],
+            "name": "OrdinalState",
+            "nameLocation": "203:12:1",
+            "nodeType": "EnumDefinition",
+            "src": "198:84:1"
+          },
+          {
+            "canonicalName": "DataTypes.Ordinal",
+            "id": 98,
+            "members": [
+              {
+                "constant": false,
+                "id": 86,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "324:2:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 98,
+                "src": "319:7:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 85,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "319:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 88,
+                "mutability": "mutable",
+                "name": "collection_name",
+                "nameLocation": "371:15:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 98,
+                "src": "364:22:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 87,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "364:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 90,
+                "mutability": "mutable",
+                "name": "priceWhenBorrowed",
+                "nameLocation": "402:17:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 98,
+                "src": "397:22:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 89,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "397:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 92,
+                "mutability": "mutable",
+                "name": "staker",
+                "nameLocation": "438:6:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 98,
+                "src": "430:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 91,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "430:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 94,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "463:5:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 98,
+                "src": "455:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 93,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "455:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 97,
+                "mutability": "mutable",
+                "name": "state",
+                "nameLocation": "541:5:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 98,
+                "src": "528:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_OrdinalState_$84",
+                  "typeString": "enum DataTypes.OrdinalState"
+                },
+                "typeName": {
+                  "id": 96,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 95,
+                    "name": "OrdinalState",
+                    "nameLocations": [
+                      "528:12:1"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 84,
+                    "src": "528:12:1"
+                  },
+                  "referencedDeclaration": 84,
+                  "src": "528:12:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_OrdinalState_$84",
+                    "typeString": "enum DataTypes.OrdinalState"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Ordinal",
+            "nameLocation": "295:7:1",
+            "nodeType": "StructDefinition",
+            "scope": 109,
+            "src": "288:269:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "DataTypes.LoanData",
+            "id": 108,
+            "members": [
+              {
+                "constant": false,
+                "id": 100,
+                "mutability": "mutable",
+                "name": "loanId",
+                "nameLocation": "600:6:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 108,
+                "src": "595:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 99,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "595:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 102,
+                "mutability": "mutable",
+                "name": "borrower",
+                "nameLocation": "625:8:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 108,
+                "src": "617:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 101,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "617:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 104,
+                "mutability": "mutable",
+                "name": "borrowedAmount",
+                "nameLocation": "649:14:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 108,
+                "src": "644:19:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 103,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "644:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 107,
+                "mutability": "mutable",
+                "name": "state",
+                "nameLocation": "684:5:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 108,
+                "src": "674:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_LoanState_$80",
+                  "typeString": "enum DataTypes.LoanState"
+                },
+                "typeName": {
+                  "id": 106,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 105,
+                    "name": "LoanState",
+                    "nameLocations": [
+                      "674:9:1"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 80,
+                    "src": "674:9:1"
+                  },
+                  "referencedDeclaration": 80,
+                  "src": "674:9:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_LoanState_$80",
+                    "typeString": "enum DataTypes.LoanState"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "LoanData",
+            "nameLocation": "570:8:1",
+            "nodeType": "StructDefinition",
+            "scope": 109,
+            "src": "563:134:1",
+            "visibility": "public"
+          }
+        ],
+        "scope": 110,
+        "src": "68:634:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "40:662:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.14",
+  "updatedAt": "2023-09-06T15:30:18.989Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

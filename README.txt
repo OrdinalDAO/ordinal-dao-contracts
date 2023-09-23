@@ -1,28 +1,73 @@
-REMIX DEFAULT WORKSPACE
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+Starting migrations...
+======================
+> Network name:    'develop'
+> Network id:      5777
+> Block gas limit: 6721975 (0x6691b7)
 
-This workspace contains 3 directories:
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+01-deploy-all.js
+================
 
-SCRIPTS
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+   Deploying 'Treasury'
+   --------------------
 
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
+   > transaction hash:    0x246f4f42ce2a668f81ba18638c34f51756d04f8110b73a346265520ce049435d
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x41D9e32359122A8C823eC432fee9a18e1fE34dB6
+   > block number:        4
+   > block timestamp:     1693891671
+   > account:             0x7444De0D38AE22729593F239C46702e158C89B4B
+   > balance:             99.977590377222168768
+   > gas used:            2208538 (0x21b31a)
+   > gas price:           3.205908282 gwei
+   > value sent:          0 ETH
+   > total cost:          0.007080370265311716 ETH
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+
+   Deploying 'Lending'
+   -------------------
+
+   > transaction hash:    0x9eaae1c16e5c379524a9dca07b4a9a6e2ac6e63e3f31a5c8dcbf2aba6b774274
+
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x4CB45B7ba274820731fD65E584548CEEE0b74524
+   > block number:        5
+   > block timestamp:     1693891671
+   > account:             0x7444De0D38AE22729593F239C46702e158C89B4B
+   > balance:             99.975779896638283897
+   > gas used:            570113 (0x8b301)
+   > gas price:           3.175652167 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001810480583884871 ETH
+
+
+
+   Deploying 'LoanOperations'
+   --------------------------
+
+   > transaction hash:    0x685e8f2c4ac106f3a206a4626b00673b9dad50213a6a871bcd110d3c59478d2a
+
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x521994Ae79bcBF51826B71A6a9c842bB88687E0e
+   > block number:        6
+   > block timestamp:     1693891672
+   > account:             0x7444De0D38AE22729593F239C46702e158C89B4B
+   > balance:             99.972421439486429269
+   > gas used:            1081447 (0x108067)
+   > gas price:           3.105521724 gwei
+   > value sent:          0 ETH
+   > total cost:          0.003358457151854628 ETH
+
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.012249308001051215 ETH
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.012249308001051215 ETH
