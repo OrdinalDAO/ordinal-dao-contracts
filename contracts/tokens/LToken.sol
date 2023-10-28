@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract LToken is ERC20, ERC20Burnable, Pausable, Ownable {
     constructor() ERC20("LToken", "LTK") {
-        _mint(msg.sender, 10000 * 10 ** decimals());
+      
     }
 
     function pause() public onlyOwner {
@@ -30,4 +30,6 @@ contract LToken is ERC20, ERC20Burnable, Pausable, Ownable {
     {
         super._beforeTokenTransfer(from, to, amount);
     }
+
+
 }

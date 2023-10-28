@@ -5,7 +5,6 @@ library DataTypes {
     enum LoanState
     {
         CREATED,
-        ACTIVE,
         REPAID,
         DEFAULTED
     }
@@ -30,6 +29,7 @@ library DataTypes {
         uint loanId;
         address borrower;
         uint borrowedAmount;
+        uint timeOfBorrow;
         LoanState state;
     }
 
